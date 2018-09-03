@@ -30,8 +30,9 @@ class App extends Component {
     this.setState({ todos: todos });
   }
    deleteToDo (index) {
-   const { todos } = this.state;
-   const newTodos = todos.filter((todo, i) => i !== index);
+   const todos = this.state.todos;
+   const todo = todos [index]
+   const newTodos = todos.filter(index => index !== todo);
    this.setState({ todos: newTodos});
   }
 
